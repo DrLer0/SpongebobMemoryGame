@@ -2,7 +2,7 @@ import React from "react";
 import {Col, Row} from "../Grid";
 
 function Icons(props){
-    console.log(props.arr);
+    // console.log(props.arr);
     var imageGroups = groupBy(4, props.arr);
     return (<div>
               {imageGroups.map(renderRow)}
@@ -15,9 +15,9 @@ function renderRow(group, index){
             </Row>);
 }
   
-function renderColumn(image, index){
+function renderColumn(image, index, props){
 return (<Col size="3" key={index}>
-            <img data-id={image.id} className="btn btn-sm img-thumbnail" src={image.image} alt=""></img>
+            <img data-id={image.id} className="btn btn-sm img-thumbnail" src={image.image} alt="" onClick={props.handleIncrement} ></img>
         </Col>);
 }
 
