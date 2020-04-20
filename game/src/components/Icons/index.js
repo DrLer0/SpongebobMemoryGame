@@ -16,11 +16,11 @@ function renderRow(group, index){
 }
   
 function renderColumn(image, index){
-return (<Col size="" key={index}>
-            <h1>{image}</h1>
+return (<Col size="3" key={index}>
+            <img data-id={image.id} className="btn btn-sm img-thumbnail" src={image.image} alt=""></img>
         </Col>);
 }
-  
+
 function groupBy(amountOfItemsPerGroup, items){
     var groups = [], group, total = items.length;
     for (var i=0; i < total; i += amountOfItemsPerGroup) {
