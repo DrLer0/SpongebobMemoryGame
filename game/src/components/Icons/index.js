@@ -1,12 +1,13 @@
 import React from "react";
-import {Col, Row} from "../Grid";
+import {Col, Row, Container} from "../Grid";
 
 function Icons(props){
     // console.log(props.arr);
     var imageGroups = groupBy(4, props.arr);
-    return (<div>
-              {imageGroups.map(renderRow)}
-            </div>);
+    return (<Container>
+        {imageGroups.map(renderRow)}
+        </Container>
+        );
 }
 
 function renderRow(group, index){
@@ -16,7 +17,7 @@ function renderRow(group, index){
 }
   
 function renderColumn(image, index, props){
-return (<Col size="3" key={index}>
+return (<Col size="md-2" key={index}>
             <img data-id={image.id} className="btn btn-sm img-thumbnail" src={image.image} alt="" onClick={props.handleIncrement} ></img>
         </Col>);
 }

@@ -23,12 +23,6 @@ import $ from "jquery";
     return array;
   }
   
-  function shuffleIcons(arr){
-    // console.log("icon clicked");
-    console.log("shuffled");
-    return shuffle(arr);
-  };
-  
   let clickedPics = [];
   let countState = 0;
   
@@ -151,10 +145,10 @@ class Counter extends React.Component {
           count={countState}
         />
         <Container fluid>
-          <h1>Clicky Game!</h1>
-          <p> Click on an image to earn points, but don't click on any more than once!</p>
+          <h1 className="text-center ">Spongebob Memory Game</h1>
+          <p className="text-center "> Click on an image to earn points, but don't click on any more than once!</p>
         </Container>
-        <Container fluid>
+        <Container>
           <Icons arr={this.state.imageArray} 
           handleIncrement={this.handleIncrement} />
         </Container>
